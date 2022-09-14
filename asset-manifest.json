@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/bits-orchestra-tt/static/css/main.d5569465.css",
+    "main.css": "/bits-orchestra-tt/static/css/main.004a97b5.css",
     "main.js": "/bits-orchestra-tt/static/js/main.61a8e636.js",
     "index.html": "/bits-orchestra-tt/index.html",
-    "main.d5569465.css.map": "/bits-orchestra-tt/static/css/main.d5569465.css.map",
+    "main.004a97b5.css.map": "/bits-orchestra-tt/static/css/main.004a97b5.css.map",
     "main.61a8e636.js.map": "/bits-orchestra-tt/static/js/main.61a8e636.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5569465.css",
+    "static/css/main.004a97b5.css",
     "static/js/main.61a8e636.js"
   ]
 }
