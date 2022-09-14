@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Dashboard } from './components/Dashboard/Dashboard';
 import './styles/normalize.scss';
 import './styles/App.scss';
@@ -12,6 +12,8 @@ function App() {
         <Route index element={<Dashboard />} />
         <Route path="add-book" element={<Dashboard />} />
       </Route>
+      <Route path="/home" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<p style={{textAlign: 'center', fontWeight: 'bold'}}>Page not found</p>} />
     </Routes>
   );
 }

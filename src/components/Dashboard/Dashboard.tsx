@@ -4,15 +4,18 @@ import { getBooks } from '../../api/api';
 import { Book } from '../../types/Book';
 import { AddBook } from '../AddBook/AddBook';
 import { BookList } from '../BookList/BookList';
+import { EditBook } from '../EditBook/EditBook';
+
 import '../../styles/Table.scss';
 import '../../styles/Dashboard.scss';
-import { EditBook } from '../EditBook/EditBook';
+import { Loader } from '../Loader';
 
 export const Dashboard: React.FC = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [isAddBook, setIsAddBook] = useState(false);
   const [isEditBook, setIsEditBook] = useState(false);
   const [selectedBook, setSelectedBook] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
   const { pathname } = useLocation();
   
@@ -52,7 +55,10 @@ export const Dashboard: React.FC = () => {
   };
 
   useEffect(() => {
-    getBooks().then(data => setBooks(data));
+    getBooks().then(data => {
+      setBooks(data);
+      setIsLoading(false);
+    });
   }, [])
 
   useEffect(() => {
@@ -99,6 +105,7 @@ export const Dashboard: React.FC = () => {
           />
         }
       </div>
+      {isLoading && <Loader />}
     </div>
   );
 }
