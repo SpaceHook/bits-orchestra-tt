@@ -1,0 +1,10 @@
+@import 'Mixin.scss';
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+
+  @include onMobile {
+    max-width: 90%;
+  }
+}

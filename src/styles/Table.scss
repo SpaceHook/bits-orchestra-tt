@@ -1,0 +1,50 @@
+@import 'Mixin.scss';
+
+.table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+  @include onMobile {
+    font-size: 12px;
+  }
+
+  &__button {
+    cursor: pointer;
+    border: none;
+    height: 30px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: 300ms;
+  }
+
+  &__buttons {
+    display: grid;
+    justify-content: space-between;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+
+    @include onMobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-edit {
+      &:hover {
+        background-color: #f5ff6d;
+      }
+    }
+
+    &-delete {
+      &:hover {
+        background-color: #ff6d6d;
+      }
+    }
+  }
+}
+
+td, th {
+  padding: 20px 0;
+  width: 20%;
+  border-bottom: 2px solid #8f8f8f81;
+}
